@@ -2,7 +2,7 @@
 A website for book borrowing/exchanging between friends
 
 ##### Environment
-* Python: 2.7
+* Python: 2.7.10
 * Django: 1.8
 
 ##### File structure
