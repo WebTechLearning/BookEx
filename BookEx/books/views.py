@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-from book.models import Book
+from books.models import Book
 
 # Create your views here.
 def book(request):
