@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>{% block title %} Main {% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img class="img-square" src='file:///Users/Mac/Dropbox/Dokelung/Project/alcom/static/img/people/dokelung.jpg' alt="Generic placeholder image" width="20" height="20">
+          </a>
+          <a class="navbar-brand" href="#">
+            BookEx
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li>
+              <a href="#">
+              <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+              <span class="badge">12</span>
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">書本</li>
+                <li><a href="#">擁有的書</a></li>
+                <li><a href="#">讀過的書</a></li>
+                <li><a href="#">喜歡的書</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">人們</li>
+                <li><a href="#">朋友</a></li>
+                <li><a href="#">群組</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Ko-Lung Yuan <span class="caret"></span>
+                <img class="img-square" src='file:///Users/Mac/Dropbox/Dokelung/Project/alcom/static/img/people/dokelung.jpg' alt="Generic placeholder image" width="20" height="20">
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">我的朋友</a></li>
+                <li><a href="#">我的書籍</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">管理</li>
+                <li><a href="#">DashBoard</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">尋求幫助</a></li>
+
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="找本好書或好朋友吧！">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li>
+              <img class="img-square center-block" src='file:///Users/Mac/Dropbox/Dokelung/Project/alcom/static/img/people/dokelung.jpg' alt="Ko-Lung Yuan" width="130" height="165">
+              <p></p>
+              <p class="text-center"> Ko-Lung Yuan </p>
+              <p class="text-center"> </p>
+            </li>
+            <li {{project_settings_flag}} >
+              <p class="text-center">
+                <a href="/project_settings/">
+                  <button class="btn btn-default btn-block" type="button">
+                    擁有的書本 <span class="badge">33</span>
+                  </button>
+                </a>
+              </p>
+            </li>
+            <li {{project_settings_flag}} >
+              <p class="text-center">
+                <a href="/project_settings/">
+                  <button class="btn btn-default btn-block" type="button">
+                    看過的書本 <span class="badge">100</span>
+                  </button>
+                </a>
+              </p>
+            </li>
+            <li {{project_settings_flag}} >
+              <p class="text-center">
+                <a href="/project_settings/">
+                  <button class="btn btn-default btn-block" type="button">
+                    喜歡的書本 <span class="badge">99</span>
+                  </button>
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          {% block sub-region %} {% endblock%}
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
