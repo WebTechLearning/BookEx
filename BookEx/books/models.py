@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class book(object):
+class Book(object):
 	title = models.CharField(max_length=20)
 
  	"""docstring for book"""
