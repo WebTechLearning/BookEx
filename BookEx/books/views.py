@@ -4,7 +4,7 @@ from books.models import Book
 
 # Create your views here.
 def book(request):
-    books = Books.objects.order_by('create_date')
+    books = Book.objects.order_by('create_date')
     return render_to_response('books.html', locals())
 
 def list_books(request):
