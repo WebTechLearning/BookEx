@@ -17,6 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from books.views import book, list_books
 
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^book/', book),
